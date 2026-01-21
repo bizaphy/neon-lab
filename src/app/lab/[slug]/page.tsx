@@ -1,6 +1,5 @@
-//pag dinamica para labs
 import { labs } from "@/lib/labs";
-//props que debe recibir la pag. desde el router
+import { minilabs, MiniLabSlug } from "@/labcontent/mini-labs";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -8,14 +7,16 @@ type PageProps = {
 
 export default async function LabSlugPage(props: PageProps) {
   const params = await props.params;
-  const urlSlug = params.slug;
-  const lab = labs.find((l) => l.slug === urlSlug);
+  const urlSlug = params.slug as MiniLabSlug;
 
-  if (!lab) {
+  const lab = labs.find((l) => l.slug === urlSlug);
+  const LabComponent = minilabs[urlSlug];
+
+  if (!lab || !LabComponent) {
     return (
       <div>
         <h1>Lab no encontrado</h1>
-        <p>No existe un lab con el slug "{urlSlug}".</p>
+        <p>No existe un lab con el slug "{params.slug}".</p>
       </div>
     );
   }
@@ -24,6 +25,8 @@ export default async function LabSlugPage(props: PageProps) {
     <div>
       <h1>{lab.title}</h1>
       <p>{lab.description}</p>
+
+      <LabComponent />
     </div>
   );
 }

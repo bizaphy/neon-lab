@@ -8,13 +8,18 @@ export type Lab = {
 
 export const labs: Lab[] = [
   {
-    slug: "lab-routing-basico",
-    title: "Routing básico en Next",
-    description: "Ejercicio simple para entender rutas y segmentos",
+    slug: "client-counter",
+    title: "Client Counter",
+    description: "Client Component usando useState",
   },
   {
-    slug: "lab-componentes",
-    title: "Componentes en React",
-    description: "Práctica de separación container / presentational",
+    slug: "client-effect-clock",
+    title: "Client Clock",
+    description: "useEffect y efectos en cliente",
+  },
+  {
+    slug: "server-time",
+    title: "Server Time",
+    description: "Renderizado en servidor sin hooks",
   },
 ];
