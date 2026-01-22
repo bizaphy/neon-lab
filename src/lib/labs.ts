@@ -13,7 +13,7 @@ export const labs: Lab[] = [
     description: "Client Component usando useState",
   },
   {
-    slug: "client-effect-clock",
+    slug: "client-clock",
     title: "Client Clock",
     description: "useEffect y efectos en cliente",
   },
@@ -21,5 +21,10 @@ export const labs: Lab[] = [
     slug: "server-time",
     title: "Server Time",
     description: "Renderizado en servidor sin hooks",
+  },
+  {
+    slug: "client-form",
+    title: "Client form",
+    description: "Formularios en cliente",
   },
 ];
