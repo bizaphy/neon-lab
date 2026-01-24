@@ -27,4 +27,14 @@ export const labs: Lab[] = [
     title: "Client form",
     description: "Formularios en cliente",
   },
+  {
+    slug: "server-fetch",
+    title: "Server fetch",
+    description: "Codigo desde el server. Fetch en Server componentes",
+  },
+  {
+    slug: "client-fetch",
+    title: "Client fetch",
+    description: "Loading states, fetch en cliente y lifecycle.",
+  },
 ];

@@ -6,7 +6,7 @@ import LabCard from "./LabCard";
 
 export default function LabList() {
   return (
-    <div>
+    <div className="space-y-4">
       {labs.map((lab) => (
         <LabCard
           key={lab.slug}
