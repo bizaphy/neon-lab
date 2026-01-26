@@ -1,0 +1,41 @@
+// app/projects/[slug]/page.tsx
+import { projects } from "@/lib/projects/projects";
+import { projectsMap, ProjectSlug } from "@/projectscontent/implementations";
+
+type PageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function ProjectSlugPage(props: PageProps) {
+  // 1) Resolver params (igual que labs)
+  const params = await props.params;
+
+  // 2) Tipar el slug
+  const urlSlug = params.slug as ProjectSlug;
+
+  // 3) Buscar metadata del proyecto
+  const project = projects.find((p) => p.slug === urlSlug);
+
+  // 4) Buscar implementación del proyecto
+  const ProjectComponent = projectsMap[urlSlug];
+
+  // 5) Validación (metadata + implementación)
+  if (!project || !ProjectComponent) {
+    return (
+      <div>
+        <h1>Proyecto no encontrado</h1>
+        <p>No existe un proyecto con el slug "{params.slug}".</p>
+      </div>
+    );
+  }
+
+  // 6) Render final
+  return (
+    <div>
+      <h1>{project.title}</h1>
+      <p>{project.description}</p>
+
+      <ProjectComponent />
+    </div>
+  );
+}
