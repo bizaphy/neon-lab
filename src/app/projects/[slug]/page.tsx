@@ -31,11 +31,21 @@ export default async function ProjectSlugPage(props: PageProps) {
 
   // 6) Render final
   return (
-    <div>
-      <h1>{project.title}</h1>
-      <p>{project.description}</p>
+<div className="space-y-6">
+  {/* Header del proyecto */}
+  <div className="space-y-2">
+    <h1 className="text-2xl font-bold">
+      {project.title}
+    </h1>
 
-      <ProjectComponent />
-    </div>
+    <p className="text-zinc-600">
+      {project.description}
+    </p>
+  </div>
+
+  {/* Contenido del proyecto */}
+  <ProjectComponent />
+</div>
+
   );
 }
