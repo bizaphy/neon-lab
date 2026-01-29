@@ -55,8 +55,6 @@ export default function TranslationCheckerText() {
 
   return (
     <section style={{ marginTop: "1rem" }}>
-      <h2>Translation Checker</h2>
-
       <p style={{ marginTop: "1rem", fontWeight: "bold" }}>
         Translate the following sentence (ENGLISH to JAPANESE):
       </p>
