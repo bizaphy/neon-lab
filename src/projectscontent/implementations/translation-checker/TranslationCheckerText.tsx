@@ -31,7 +31,7 @@ export default function TranslationCheckerText() {
       .toLowerCase()
       .trim()
       .replace(/[.,!?]/g, "")
-      .replace(/\s+/g, " ");
+      .replace(/\s+/g, "");
   };
 
   // verifica si la respuesta es correcta

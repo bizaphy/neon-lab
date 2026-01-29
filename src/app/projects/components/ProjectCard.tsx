@@ -12,13 +12,15 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <article className="rounded-xl border border-zinc-200 p-5 hover:bg-zinc-50 transition">
-      <h2 className="text-lg font-semibold">{title}</h2>
+    <article className="neon-card group">
+      <h2 className="text-lg font-semibold neon-card-title">{title}</h2>
 
-      <p className="mt-2 text-sm text-zinc-600">{description}</p>
+      <p className="mt-2 text-sm text-zinc-600 neon-card-text">{description}</p>
 
-      {/* enlace individual del proyecto */}
-      <Link href={`/projects/${slug}`} className="text-sm underline">
+      <Link
+        href={`/projects/${slug}`}
+        className="text-sm underline neon-card-link"
+      >
         Ir al proyecto
       </Link>
     </article>
