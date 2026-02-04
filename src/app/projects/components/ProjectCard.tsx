@@ -17,10 +17,7 @@ export default function ProjectCard({
 
       <p className="mt-2 text-sm text-zinc-600 neon-card-text">{description}</p>
 
-      <Link
-        href={`/projects/${slug}`}
-        className="text-sm underline neon-card-link"
-      >
+      <Link href={`/projects/${slug}`} className="text-sm neon-link">
         Ir al proyecto
       </Link>
     </article>

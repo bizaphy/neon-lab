@@ -25,7 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* CARD*/
+/* EFECTO NEON*/
 @layer components {
   .neon-card {
     @apply rounded-xl border border-zinc-200 p-5 transition;
@@ -40,11 +40,11 @@ body {
     @apply transition;
   }
 
-  .neon-card-link {
-    @apply text-zinc-300 underline transition;
+  .neon-link {
+    @apply text-zinc-300 transition;
   }
 
-  .neon-card-link:hover {
+  .neon-link:hover {
     @apply text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.9)];
   }
 }

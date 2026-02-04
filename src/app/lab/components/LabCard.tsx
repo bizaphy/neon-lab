@@ -13,11 +13,14 @@ type LabCardProps = {
 
 export default function LabCard({ slug, title, description }: LabCardProps) {
   return (
-    <article className="rounded-xl border border-zinc-200 p-5 hover:bg-zinc-50 transition">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p className="mt-2 text-sm text-zinc-600">{description}</p>
-      {/* enlace individual de cada post -- debe ser con backslash */}
-      <Link href={`/lab/${slug}`}>Ir al lab</Link>
+    <article className="neon-card">
+      <h2 className="neon-card-title text-lg font-semibold">{title}</h2>
+
+      <p className="neon-card-text mt-2 text-sm text-zinc-600">{description}</p>
+
+      <Link href={`/lab/${slug}`} className="neon-link">
+        Ir al lab
+      </Link>
     </article>
   );
 }
